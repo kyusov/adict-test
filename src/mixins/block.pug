@@ -1,0 +1,16 @@
+mixin block(title, text, urls)
+    section.block
+        .block__left
+            .block__wrapper
+                h1.block__title #{title}
+                p.block__desc #{text}
+                .block__feedback
+                    input.block__input(type="email", name="email", placeholder="Введите email")
+                    button.block__submit(type="submit") Узнать 
+        .block__right
+            if (urls.length === 1)
+                img.block__img(src=`${urls[0]}`, alt="benefit")
+            else if (urls.length > 1)
+                .block__imgs
+                    each url, i in urls
+                        img(class=`block__img-${i}` src=`${url}`, alt=`benefit ${i}`)

@@ -1,0 +1,125 @@
+.block {
+    max-width: 1100px;
+    width: 100%;
+    margin: 90px auto 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 498px;
+    }
+
+    &__title,
+    &__desc {
+        color: $text-color;
+    }
+
+    &__title {
+        max-width: 460px;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 115%;
+        letter-spacing: 0.985946px;
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 156%;
+        letter-spacing: 0.443077px;
+        margin-top: 1em;
+    }
+
+    &__feedback {
+        max-width: 440px;
+
+        background-color: rgba(243, 249, 255, 1);
+        border-radius: 44px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 3em;
+    }
+
+    &__input {
+        border: none;
+        outline: none;
+
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.96px;
+
+        color: $text-color;
+        background-color: transparent;
+
+        padding: 12px 0 12px 20px;
+
+        &::placeholder {
+            color: rgba(23, 146, 199, 1);
+        }
+    }
+
+    &__submit {
+        height: 100%;
+        border: none;
+        background-color: $button-static-blue;
+        outline: none;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.443077px;
+        color: $button-static-white;
+        padding: 12px 53px;
+        border-radius: 44px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__left {
+        width: 50%;
+    }
+
+    &__right {
+        position: relative;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__imgs {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__img {
+        &-1, &-2 {
+            position: absolute;
+        }
+
+        &-0 {
+            position: relative;
+            z-index: 1;
+        }
+
+        &-1 {
+            z-index: 3;
+            bottom: 50%;
+            right: 26%;
+        }
+
+        &-2 {
+            z-index: 2;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

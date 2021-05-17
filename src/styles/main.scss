@@ -1,0 +1,14 @@
+@import './components/header';
+@import './components/block';
+@import './components/info';
+@import './font';
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, input, textarea {
+    font-family: 'Avenir Next Cyr', sans-serif;
+}

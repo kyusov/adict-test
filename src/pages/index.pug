@@ -1,0 +1,31 @@
+extends ../layout/layout.pug
+
+include ../mixins/block.pug
+
+block vars
+  - var title = 'Everypay'
+
+block styles
+  link(rel="stylesheet", href="css/main.min.css")
+
+block header
+  include ../components/header.pug
+
+  +block('Не пропускайте важные оплаты', 
+  'Если от них зависят ваши проекты или старт рекламных кампаний',
+  ['img/pic-1.png'])
+
+  +block('Сократите издержки на бухгалтерию и коммуникации', 
+  'Получайте информацию о платежах на счет компании там, где вам удобно',
+  ['img/cactus.png', 'img/coin.png', 'img/pig.png'])
+
+  +block('Создавайте собственные сценарии действий', 
+  'При поступлении денег на счет вашей компании',
+  ['img/pic-2.png'])
+
+  +block('Реагируйте на платежи так быстро, как они поступают на ваш счет', 
+  '',
+  ['img/pic-3.png'])
+
+  include ../components/info.pug
+  

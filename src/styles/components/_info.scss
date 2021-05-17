@@ -1,0 +1,33 @@
+.info {
+    width: 100%;
+    max-width: 1100px;
+    margin: 100px auto;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left,
+    &__right {
+        width: 50%;
+    }
+
+    &__title, &__text {
+        color: $text-color;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 129%;
+        letter-spacing: 0.44px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 156%;
+        letter-spacing: 0.443077px;
+        margin-top: 24px;
+    }
+}
